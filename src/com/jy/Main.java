@@ -29,7 +29,7 @@ public class Main {
 	 * @return 幂指数的结果
 	 */
 	private static double power(double base, int exponent) {
-		if (base == 0.0) {
+		if (base == 0.0) { // 底数为0的情况
 			if (exponent < 0) {
 				throw new RuntimeException("Invalid Input!");
 			} else {
