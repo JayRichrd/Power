@@ -78,9 +78,10 @@ public class Main {
 			return 1.0;
 		if (absexponent == 1)
 			return base;
+		// 指数右移1位后，递归
 		double result = powerWithUnsignedExponent2(base, absexponent >> 1);
 		result *= result;
-		if ((absexponent & 0x1) == 1)
+		if ((absexponent & 0x1) == 1) // 是否为奇数
 			result *= base;
 		return result;
 
